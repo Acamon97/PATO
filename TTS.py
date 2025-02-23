@@ -4,16 +4,12 @@ Implementación de síntesis de voz usando el pipeline de Kokoro y eSpeak.
 """
 
 import os
-import logging
-import time
 from kokoro import KPipeline
 import soundfile as sf
 from playsound import playsound
 import sounddevice as sd
 from phonemizer.backend.espeak.wrapper import EspeakWrapper
 
-# Configuración de logging
-logging.basicConfig(level=logging.INFO)
 
 # Configuración de la librería eSpeak (usa cadenas raw para rutas)
 _ESPEAK_LIBRARY = r'C:\Program Files\eSpeak NG\libespeak-ng.dll'
@@ -40,9 +36,9 @@ def hola(text):
         sd.wait()
         
         # Guarda cada fragmento en un archivo separado para evitar sobrescrituras
-        filename = os.path.join("Resources", f"response_{i}.wav")
+        filename = os.path.join("Resources", "response.wav")
         sf.write(filename, audio, 24000)
-        logging.info(f"Fragmento de respuesta guardado en: {filename}")
+        print(f"Fragmento de respuesta guardado en: {filename}")
 
 def quack(times):
     """

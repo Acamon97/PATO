@@ -2,6 +2,10 @@
 SpeechRecognition
 pyaudio
 faster-whisper
+ç
+# ser
+torchaudio
+funasr
 
 ## TTS
 sounddevice
@@ -9,3 +13,7 @@ soundfile
 kokoro
 IPython
 playsound
+
+# PLN
+rasa
+
