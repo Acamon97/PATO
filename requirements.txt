@@ -1,0 +1,11 @@
+# ASR Verified
+SpeechRecognition
+pyaudio
+faster-whisper
+
+## TTS
+sounddevice
+soundfile
+kokoro
+IPython
+playsound
