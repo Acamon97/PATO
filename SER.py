@@ -46,6 +46,7 @@ class SER:
             return None
 
         try:
+            #print("Detectando emoción...")
             # Se guarda la salida en el directorio especificado
             result = self.model.generate(wav_file, output_dir=self.output_dir,
                                          granularity="utterance", extract_embedding=False, disable_pbar=True)
@@ -59,7 +60,7 @@ class SER:
             emotion_detected_index = scores.index(emotion_detected_value)
             emotion_detected = self.emotions.get(emotion_detected_index, "unknown")
             
-            print(f"Emoción detectada: {emotion_detected}")
+            print(f"\nSER -> Emoción detectada: {emotion_detected}")
             return emotion_detected
         except Exception as e:
             print(f"ERROR: Error al detectar la emoción: {e}")

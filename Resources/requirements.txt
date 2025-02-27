@@ -2,7 +2,7 @@
 SpeechRecognition
 pyaudio
 faster-whisper
-ç
+
 # ser
 torchaudio
 funasr
@@ -12,8 +12,15 @@ sounddevice
 soundfile
 kokoro
 IPython
-playsound
+playsound==1.2.2
 
-# PLN
-rasa
+# PLNs
+#rasa
+psutil
 
+# LLM
+torch
+ollama
+langchain_ollama
+langchain_core
+langchain

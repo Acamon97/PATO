@@ -1,0 +1,251 @@
+ASISTENTE P.A.T.O. ACTIVO
+
+
+ASR -> Escuchando comandos...
+
+ASR -> Frase detectada: Oye, pato, ¿tengo tareas pendientes?
+
+SER -> Emoción detectada: neutral
+
+DM -> Mensaje usuario: ¿tengo tareas pendientes?
+
+DM -> Listas de tareas pendientes:     
+1. Comprar leche (Prioridad: normal)   
+2. Comprar pan (Prioridad: baja)       
+3. Comprar cereales (Prioridad: normal)
+
+DM -> Listas de tareas completadas:    
+No tienes tareas completadas.
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Sí, tienes algunas tareas pendientes. Aquí te las muestro:",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        }
+    ]
+}
+
+DM -> Listas de tareas pendientes:
+1. Comprar leche (Prioridad: normal)
+2. Comprar pan (Prioridad: baja)
+3. Comprar cereales (Prioridad: normal)
+
+DM -> Listas de tareas completadas:
+No tienes tareas completadas.
+
+TTS -> "Sí, tienes algunas tareas pendientes. Aquí te las muestro: comprar leche, comprar pan y comprar cereales."
+
+--------------------------------------------------
+
+ASR -> Escuchando comandos...
+
+ASR -> Frase detectada: Quiero añadir comprar chocolate con prioridad alta.
+
+SER -> Emoción detectada: neutral
+
+DM -> Conversación activa
+
+DM -> Mensaje usuario: Quiero añadir comprar chocolate con prioridad alta.
+
+DM -> Listas de tareas pendientes:
+1. Comprar leche (Prioridad: normal)
+2. Comprar pan (Prioridad: baja)
+3. Comprar cereales (Prioridad: normal)
+
+DM -> Listas de tareas completadas:
+No tienes tareas completadas.
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Genial! Añadiré 'comprar chocolate' a tu lista con prioridad alta.",
+    "tool_calls": [
+        {
+            "action": "añadir_tarea",
+            "task": "Comprar chocolate",
+            "due_date": "2025-02-27",
+            "priority": "alta"
+        }
+    ]
+}
+
+DM -> Listas de tareas pendientes:
+1. Comprar leche (Prioridad: normal)
+2. Comprar pan (Prioridad: baja)
+3. Comprar cereales (Prioridad: normal)
+4. Comprar chocolate (Prioridad: alta)
+
+DM -> Listas de tareas completadas:
+No tienes tareas completadas.
+
+TTS -> "¡Genial! Añadiré 'comprar chocolate' a tu lista con prioridad alta."
+
+--------------------------------------------------
+
+ASR -> Escuchando comandos...
+
+ASR -> Frase detectada: ¿Tengo alguna tarea con prioridad baja?
+
+SER -> Emoción detectada: neutral
+
+DM -> Conversación activa
+
+DM -> Mensaje usuario: ¿Tengo alguna tarea con prioridad baja?
+
+DM -> Listas de tareas pendientes:
+1. Comprar leche (Prioridad: normal)
+2. Comprar pan (Prioridad: baja)
+3. Comprar cereales (Prioridad: normal)
+4. Comprar chocolate (Prioridad: alta)
+
+DM -> Listas de tareas completadas:
+No tienes tareas completadas.
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Sí, tienes una tarea con prioridad baja. La tarea 'Comprar pan' se encuentra pendiente.",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        }
+    ]
+}
+
+DM -> Listas de tareas pendientes:
+1. Comprar leche (Prioridad: normal)
+2. Comprar pan (Prioridad: baja)
+3. Comprar cereales (Prioridad: normal)
+4. Comprar chocolate (Prioridad: alta)
+
+DM -> Listas de tareas completadas:
+No tienes tareas completadas.
+
+TTS -> "Sí, tienes una tarea con prioridad baja. La tarea 'Comprar pan' se encuentra pendiente."
+
+--------------------------------------------------
+
+ASR -> Escuchando comandos...
+
+ASR -> Frase detectada: Pato, dame un momento, ahora vuelvo.
+
+SER -> Emoción detectada: neutral
+
+DM -> Conversación activa
+
+NLU -> Intent detectado: pausar_conversacion
+
+DM -> Conversación en pausa
+
+TTS -> Conversación pausada. Avísame cuando quieras continuar.
+
+--------------------------------------------------
+
+ASR -> Escuchando comandos...
+
+ASR -> Frase detectada: Ahora mismo estoy teniendo una conversación y el asistente no me hace caso.
+
+SER -> Emoción detectada: neutral
+
+DM -> Conversación activa
+
+DM -> En pausa
+
+ASR -> Escuchando comandos...
+
+ASR -> Frase detectada: Pato, disculpa, ya estoy por aquí. Continuemos.
+
+SER -> Emoción detectada: neutral
+
+DM -> Conversación activa
+
+DM -> En pausa
+
+NLU -> Intent detectado: continuar_conversacion
+
+DM -> Conversación reactivada
+
+TTS -> Conversación reanudada. ¿Cómo puedo ayudarte?
+
+--------------------------------------------------
+
+ASR -> Escuchando comandos...
+
+ASR -> Frase detectada: ¿Puedes volver a decirme qué tareas tengo?
+
+SER -> Emoción detectada: neutral
+
+DM -> Conversación activa
+
+DM -> Mensaje usuario: ¿Puedes volver a decirme qué tareas tengo?
+
+DM -> Listas de tareas pendientes:
+1. Comprar leche (Prioridad: normal)
+2. Comprar pan (Prioridad: baja)
+3. Comprar cereales (Prioridad: normal)
+4. Comprar chocolate (Prioridad: alta)
+
+DM -> Listas de tareas completadas:
+No tienes tareas completadas.
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Tienes 4 tareas pendientes. Aquí te las muestro:",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+
+DM -> Listas de tareas pendientes:
+1. Comprar leche (Prioridad: normal)
+2. Comprar pan (Prioridad: baja)
+3. Comprar cereales (Prioridad: normal)
+4. Comprar chocolate (Prioridad: alta)
+
+DM -> Listas de tareas completadas:
+No tienes tareas completadas.
+
+TTS -> "Tienes 4 tareas pendientes. Aquí te las muestro: comprar leche, comprar pan, comprar cereales y comprar chocolate"
+
+--------------------------------------------------
+
+ASR -> Escuchando comandos...
+
+ASR -> Frase detectada: ¡Muchas gracias, pato! Hasta luego.
+
+SER -> Emoción detectada: neutral
+
+DM -> Conversación activa
+
+NLU -> Intent detectado: despedir
+
+TTS -> Hasta luego.
+
+--------------------------------------------------
+
+ PATO se ha apagado correctamente.
