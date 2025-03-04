@@ -1,0 +1,1 @@
+rasa train nlu -d D:\MASTER\Modules\RASA\domain.yml -u D:\MASTER\Modules\RASA\data\nlu.yml -c D:\MASTER\Modules\RASA\config.yml --out D:\MASTER\PATO\models

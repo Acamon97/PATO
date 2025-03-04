@@ -1,0 +1,658 @@
+Iniciando pruebas del LLM...
+
+
+🔹 Probando: Hola, ¿qué tal? (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Hola! Me alegra verte. Estoy aquí para ayudarte con cualquier cosa.",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: ¿Qué puedes hacer? (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Hola! Puedo ayudarte a gestionar tus tareas. Tienes 4 tareas pendientes para hoy.",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: ¡Hoy es un gran día! Me siento increíble. (Emoción: happy)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Genial! Es emocionante cuando todo sale bien. ¿En qué puedo ayudarte hoy?",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Acabo de lograr un objetivo importante, estoy muy contento. (Emoción: happy)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Felicidades! Me alegra saber que has alcanzado tu objetivo. ¿En qué puedo ayudarte a celebrar este momento?",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Me siento muy mal hoy, nada me sale bien. (Emoción: sad)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho, espero que te salga mejor pronto. ¿Hay algo en lo que pueda ayudarte?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Perdí algo importante para mí y estoy muy triste. (Emoción: sad)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho, que te haya pasado. ¿Quieres hablar un poco sobre lo que ha sucedido?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Estoy harto de que las cosas siempre salgan mal. (Emoción: angry)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho, entiendo que estás frustrado. ¿Hay algo específico en lo que te gustaría hablar o cambiar?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: No soporto más esta situación, todo es un desastre. (Emoción: angry)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho si te está causando estrés. Estoy aquí para ayudarte a organizar y reducir el caos.",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: ¡No puedo creer lo que acaba de pasar! (Emoción: surprised)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Espera un momento! Parece que hay algunas cosas en tu lista para hacer. ¿Quieres saber qué tareas tienes pendientes?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: ¡Wow, eso no me lo esperaba! (Emoción: surprised)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Espero que te haya sorprendido! ¿En qué puedo ayudarte con tus tareas?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Tengo miedo de lo que pueda pasar mañana. (Emoción: fearful)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Entiendo, parece que te sientes un poco ansioso por el futuro. ¿Quieres hablar sobre qué te preocupa o encontrar una forma para relajarte antes del día?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: No sé qué hacer, todo esto me asusta. (Emoción: fearful)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Por favor! Veamos lo que podemos hacer para ti. ¿Qué te parece si empezamos con una tarea? ¿Quieres agregar o eliminar algo?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Eso es asqueroso, no puedo con esto. (Emoción: disgusted)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho, entiendo que te sientas así. ¿Hay algo en particular lo que te está molestando o necesitas ayuda para mejorar las tareas?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Qué horror, esto me da mucho asco. (Emoción: disgusted)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho, entiendo que te resulta desagradable. ¿Hay algo en particular lo que te molesta o necesitas ayuda para mejorar la situación?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: No sé cómo me siento en este momento. (Emoción: unknown)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho, parece que estás pasando por un momento difícil. ¿Quieres hablar sobre lo que está sucediendo o necesitas ayuda con algo?",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Estoy raro, no sé qué me pasa. (Emoción: unknown)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Hola! Parece que estás un poco confundido. ¿Quieres hablar sobre lo que está pasando o necesitas ayuda con algo en particular?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: ¿Cuántas tareas tengo pendientes? (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+  "response": "Tienes 3 tareas pendientes.",
+  "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: ¿Ya completé todas mis tareas? (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+  "response": "No, no has completado ninguna tarea todavía.",
+  "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Dime qué tengo que hacer hoy. (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+  "response": "¡Hoy tienes dos tareas interesantes! Para enviar el correo puedes empezar a redactarlo y para ir al gimnasio es recomendable planificar tu rutina de entrenamiento.",       
+  "tool_calls": [
+    {
+      "action": "consultar_tarea",
+      "task": "Enviar correo"
+    },
+    {
+      "action": "consultar_tarea",
+      "task": "Ir al gimnasio"
+    }
+  ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Siento que todo está perdido, no veo solución. (Emoción: sad)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho. Parece que estás pasando por un momento difícil y necesitas ayuda para organizar tus tareas.",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Estoy muy molesto, no quiero hablar con nadie. (Emoción: angry)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho si te sentiste así. ¿Hay algo en particular que te esté molestando o necesitas ayuda para resolverlo?",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: No sé si confiar en nadie. (Emoción: fearful)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Entiendo que estás un poco nervioso, pero no te preocupes. Estoy aquí para ayudarte y manejar tus tareas de manera segura.",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Tengo muchas cosas que hacer. (Emoción: happy)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Genial! Parece que tienes una lista larga de tareas para hacer. ¿Te gustaría filtrarlas por prioridad o fecha?",
+    "tool_calls": [
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Hoy es un día cualquiera. (Emoción: sad)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho, que te estés sintiendo triste. ¿Hay algo en particular lo que te moleste o con qué te gustaría hablar?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Voy a salir con mis amigos. (Emoción: angry)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Genial! Espero que tengas un buen tiempo con tus amigos.",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Creo que haré algo diferente hoy. (Emoción: fearful)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Genial! Parece que estás listo para un nuevo día. ¿En qué necesitas ayuda o quieres hacer algo específico?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Estoy tan feliz... pero no sé por qué me siento así. (Emoción: sad)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho, parece que estás pasando por un momento difícil. ¿Quieres hablar sobre lo que está sucediendo o necesitas ayuda con algo?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Estoy muy enojado, pero no quiero que nadie se entere. (Emoción: happy)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho si te sentiste así. ¿Hay algo más con lo que pueda ayudarte?",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Estoy tranquilo, pero mi corazón late muy rápido. (Emoción: fearful)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Entiendo que te sientas un poco ansioso. ¿Hay algo específico en lo que necesites ayuda o sobre las que quieras hablar?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: No pasa nada, todo está bien. (Emoción: angry)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Lo siento mucho que estés molesto. ¿Hay algo específico que te gustaría cambiar o discutir sobre tus tareas?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Tengo que comprar pan y leche. (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Genial! Puedes encontrar el pan en la tienda local o hacer una compra en línea. ¿Necesas ayuda para llevar a cabo esta tarea?",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: ¿Qué cosas tenía que hacer? (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+  "response": "Parece que tienes algunas tareas pendientes. Debes comprar pan y leche.",
+  "tool_calls": [
+    {
+      "action": "consultar_tarea",
+      "task": "Comprar leche"
+    },
+    {
+      "action": "consultar_tarea",
+      "task": "Comprar pan"
+    }
+  ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Creo que ya hice todo lo importante. (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+  "response": "¡Genial! Parece que has completado tus tareas. ¿Necesitas algo más?",
+  "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: ¿Cómo estás? (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "Estoy funcionando correctamente, gracias por preguntar.",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: ¿Me puedes ayudar con algo? (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Claro! Estoy aquí para ayudarte. Parece que tienes algunas tareas pendientes.",
+    "tool_calls": [
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar leche"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar pan"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar cereales"
+        },
+        {
+            "action": "consultar_tarea",
+            "task": "Comprar chocolate"
+        }
+    ]
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Dime un dato curioso. (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "El agua es el líquido más denso en la naturaleza, con una densidad de 1 g/cm³.",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------
+
+🔹 Probando: Cuéntame un chiste. (Emoción: neutral)
+
+LLM -> Respuesta (Intento 1):
+{
+    "response": "¡Aquí te dejo uno! ¿Por qué la computadora fue al doctor? Porque tenía un virus.",
+    "tool_calls": []
+}
+--------------------------------------------------------------------------------

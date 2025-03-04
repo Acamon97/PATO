@@ -1,20 +1,26 @@
 [
     {
-        "task": "Comprar leche",
-        "created_at": "2025-02-26",
-        "due_date": null,
-        "priority": "normal"
-    },
-    {
-        "task": "Comprar pan",
-        "created_at": "2025-02-26",
-        "due_date": null,
-        "priority": "normal"
-    },
-    {
         "task": "Comprar cereales",
-        "created_at": "2025-02-26",
-        "due_date": null,
+        "created_at": "2025-02-03",
+        "due_date": "2025-03-03",
+        "priority": "normal"
+    },
+    {
+        "task": "Comprar leche",
+        "created_at": "2025-03-03",
+        "due_date": "2025-03-04",
+        "priority": "normal"
+    },
+    {
+        "task": "Comprar detergente",
+        "created_at": "2025-03-03",
+        "due_date": "2025-03-04",
+        "priority": "normal"
+    },
+    {
+        "task": "Ir al médico",
+        "created_at": "2025-03-03",
+        "due_date": "2025-03-10",
         "priority": "normal"
     }
 ]

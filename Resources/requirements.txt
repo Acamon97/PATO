@@ -24,3 +24,7 @@ ollama
 langchain_ollama
 langchain_core
 langchain
+
+# text
+pandas
+jiwer
