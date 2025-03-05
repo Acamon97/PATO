@@ -61,7 +61,7 @@ def speak(text):
         generator = pipeline(
             chunk,  
             voice='ef_dora',
-            speed=1,
+            speed=1.1,
             split_pattern=r'\n+'  # Asegura una correcta segmentación del texto
         )
     

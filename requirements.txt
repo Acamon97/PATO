@@ -1,0 +1,30 @@
+# ASR Verified
+SpeechRecognition
+pyaudio
+faster-whisper
+
+# ser
+torchaudio
+funasr
+
+## TTS
+sounddevice
+soundfile
+kokoro
+IPython
+playsound==1.2.2
+
+# PLNs
+#rasa
+psutil
+
+# LLM
+torch
+ollama
+langchain_ollama
+langchain_core
+langchain
+
+# text
+pandas
+jiwer

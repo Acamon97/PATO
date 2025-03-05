@@ -1,0 +1,10 @@
+Frase,Intent esperado,Intent detectado
+"Pato, apágate y descansa",despedir,terminar_conversacion
+"Pato, para la conversación",terminar_conversacion,nlu_fallback
+"Pato, para ya, necesito silencio",terminar_conversacion,nlu_fallback
+Quiero cerrar este tema y seguir otro día,terminar_conversacion,nlu_fallback
+Dame una lista de órdenes válidas,mostrar_comandos,nlu_fallback
+Guarda silencio hasta que te diga que sigas,pausar_conversacion,nlu_fallback
+Qué temperatura hará mañana en Madrid?,nlu_fallback,pausar_conversacion
+Toma nota: 'terminar presentación para el viernes',nlu_fallback,terminar_conversacion
+"Ya terminé 'llamar al médico', márcala como hecha",nlu_fallback,terminar_conversacion

@@ -52,7 +52,7 @@ class SER:
             0: 'angry', 1: 'disgusted', 2: 'fearful', 3: 'happy',
             4: 'neutral', 5: 'other', 6: 'sad', 7: 'surprised', 8: 'unknown'
         }
-
+    
         try:
             self.model = AutoModel(model=model_id, disable_update=True, log_level="CRITICAL")
             print("Modelo de SER cargado correctamente.")

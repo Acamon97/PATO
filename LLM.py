@@ -25,6 +25,7 @@ Métodos principales:
 - `borrar_memoria()`: Limpia la memoria conversacional.
 """
 
+from calendar import calendar
 from datetime import datetime, timedelta
 import json
 from langchain_ollama import ChatOllama
@@ -121,6 +122,21 @@ class LLM:
         except (json.JSONDecodeError, ValidationError) as e:
             print(f"ERROR: Validación del JSON fallida: {e}")
             return None
+        
+                     
+    def findDay(self, date):
+        """Recibe una fecha en formato YYYY-MM-DD y devuelve el nombre del día de la semana en español."""
+        try:
+            dt = datetime.strptime(date, "%Y-%m-%d")  # Convertir la fecha al formato correcto
+            dayNumber = dt.weekday()  # Obtener el índice del día (0=Lunes, 6=Domingo)
+            
+            # Días en español con lunes como día 0 (para coincidir con weekday())
+            days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+            
+            return days[dayNumber]
+        except ValueError:
+            return "Fecha inválida"
+                        
 
     def get_formated_prompt(self, mensaje_usuario, emotion_detected, contexto):
         """Construye el prompt formateado con contexto y memoria conversacional."""
@@ -130,6 +146,9 @@ class LLM:
         hoy = datetime.today()
         fecha_actual = hoy.strftime('%Y-%m-%d')
         fecha_mañana = (hoy + timedelta(1)).strftime('%Y-%m-%d')
+        
+        dia = self.findDay(fecha_actual)
+        
 
         system_template = """ 
         Eres PATO, un asistente virtual especializado en gestionar tareas y conversar de forma amistosa.
@@ -138,7 +157,7 @@ class LLM:
         {history_summary}
 
         Fecha actual:
-        {fecha_actual}
+        {dia}, {fecha_actual}
 
         INSTRUCCIONES:
         1. Devuelve SIEMPRE un JSON con la siguiente estructura:
@@ -152,6 +171,7 @@ class LLM:
         3. Si el usuario menciona acciones de tareas (añadir, eliminar, completar, modificar, deshacer, consultar), usa "tool_calls":
             - "action": Acción a realizar.
             - "task": Nombre de la tarea (si aplica).
+            - "new_task": Nuevo nombre de la tarea cuando se modifica (si aplica).
             - "due_date": Convertir fechas relativas como "mañana" a YYYY-MM-DD.
             - "priority": Solo incluir si el usuario la menciona.
 
@@ -164,6 +184,14 @@ class LLM:
             - Salida: "due_date": "{fecha_mañana}".			
             
         7. No uses saltos de linea ni '\n' en "response", escríbelo en la misma frase.
+        
+        8. El usuario no puede ver ninguna pantalla, toda la comunicación es por voz y el campo "response" es lo que escucha el usuario.
+        
+        9. Las únicas acciones relacionadas con tareas implementadas son 'añadir', 'eliminar', 'completar', 'modificar', 'deshacer' y 'consultar'.
+        
+        10. Las prioridades de "prioroty" son 'baja', 'normal', 'alta' y 'urgente.
+        
+        11. La fecha de "due_date" por defecto para tareas nuevas es la de {fecha_mañana}.
 
         Ejemplo 1 de salida:
         {{
@@ -218,6 +246,7 @@ class LLM:
             history_summary=history_summary,
             fecha_actual=fecha_actual,
             fecha_mañana=fecha_mañana,
+            dia=dia,
         ).to_string()
 
     def borrar_memoria(self):

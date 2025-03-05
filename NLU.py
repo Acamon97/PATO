@@ -22,7 +22,6 @@ Métodos principales:
 - `stop_rasa_nlu()`: Detiene el servidor Rasa si está en ejecución.
 """
 
-import json
 import subprocess
 import requests
 import time
@@ -59,6 +58,7 @@ class NLU:
     def get_latest_nlu_model(self, models_path):
         """Busca el modelo NLU más reciente en la carpeta de modelos."""
         model_files = glob.glob(os.path.join(models_path, "nlu-*.tar.gz"))
+
         if not model_files:
             return None
         latest_model = max(model_files, key=os.path.getctime)  # Seleccionar el modelo más reciente
@@ -129,7 +129,8 @@ class NLU:
             resultado = response.json()
             intent = resultado.get("intent", {}).get("name", "desconocido")
             confidence = resultado.get("intent", {}).get("confidence", 0)
-            if confidence < 1:
+            print(f"intent: {intent}, confianza: {confidence}")
+            if confidence <= 0.97:
                 return "nlu_fallback"
             return intent
 

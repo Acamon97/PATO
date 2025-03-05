@@ -1,0 +1,246 @@
+version: "3.1"
+nlu:
+
+- intent: despedir
+  examples: |
+    - adiós
+    - hasta luego
+    - nos vemos
+    - adios
+    - ciao
+    - chao
+    - bye bye
+    - nos vemos más tarde
+    - hablamos luego
+    - que tengas un buen día
+    - me voy, hasta luego
+    - gracias, adiós
+    - muchas gracias, hasta luego
+    - gracias, nos vemos
+    - nos vemos después
+    - ya me voy, hasta otra
+    - ya me retiro
+    - nos vemos pronto
+    - nos vemos mañana
+    - hablamos después
+    - gracias por la ayuda, hasta luego
+    - cuídate, adiós
+    - te veo luego
+    - ya puedes descansar
+    - ya no necesito más ayuda
+    - dejo esto por ahora, nos vemos
+    - pato, adiós
+    - pato, ya me voy
+    - pato, me despido
+    - pato, hablamos en otro momento
+
+
+- intent: terminar_conversacion
+  examples: |
+    - termina la conversación
+    - sal de la conversación
+    - fin de la conversación
+    - se acabó la conversación
+    - finalizar conversación
+    - salir de la conversación
+    - corta la conversación
+    - ya no necesito hablar más
+    - cierra el chat
+    - detén el diálogo
+    - para todo
+    - basta de hablar
+    - deja de hablar
+    - ya no quiero seguir hablando
+    - termina esto
+    - pato, ya no más
+    - pato, apágate
+    - pato, detente
+    - pato, no sigas
+    - pato, desconéctate
+    - pato, corta la comunicación
+    - pato, para ya
+    - pato, termina esto
+    - ya no quiero seguir con esto
+    - esto ya no es necesario, cierra todo
+    - pato, finaliza la conversación
+    - ya hemos terminado, deja de hablar
+    - termina la conversación
+    - detente, pato
+    - pato, para ya
+    - terminar conversación
+    - finaliza la conversación
+    - deja de responder
+    - no hables más
+    - para de una vez
+
+
+
+- intent: reiniciar_conversacion
+  examples: |
+    - reinicia la conversación
+    - reiniciar conversación
+    - empezar desde cero
+    - quiero empezar de nuevo
+    - olvida lo que hemos hablado
+    - borra el historial de esta conversación
+    - vamos a comenzar de nuevo
+    - resetea la conversación
+    - empieza otra vez
+    - vuelve a empezar
+    - borra todo el contexto
+    - olvida esta conversación y empecemos de nuevo
+    - elimina todo lo que hemos hablado
+    - borra la memoria y empecemos de cero
+    - quiero un reinicio completo
+    - no me gusta cómo ha ido, empecemos otra vez
+    - empecemos desde cero
+    - quiero que olvides todo lo que hemos hablado
+    - resetea y vuelve a empezar
+    - necesito empezar la conversación desde cero
+    - quiero un nuevo comienzo
+    - borra lo anterior y comencemos otra vez
+
+- intent: mostrar_comandos
+  examples: |
+    - muéstrame los comandos
+    - mostrar comandos
+    - dime los comandos
+    - qué opciones tengo disponibles
+    - qué cosas puedes hacer
+    - cómo puedo usarte
+    - enséñame qué funciones tienes
+    - qué comandos están disponibles
+    - qué instrucciones puedes entender
+    - dime qué órdenes aceptas
+    - qué comandos puedo usar contigo
+    - enséñame cómo usarte
+    - qué comandos tienes para controlar la conversación
+    - cómo manejo esta conversación contigo
+    - dime las órdenes de control que entiendes
+    - qué frases reconoces como comandos
+    - dime los comandos internos disponibles
+    - qué opciones tengo para gestionar la conversación
+    - dime qué comandos usas para pausarte o detenerte
+    - cómo interactúo contigo usando comandos
+    - explícale a alguien nuevo cómo usarte
+    - quiero saber cómo puedo controlarte con comandos
+
+
+- intent: pausar_conversacion
+  examples: |
+    - pausar la conversación
+    - pausa la conversación
+    - pausar conversación
+    - detener conversación
+    - para la conversación
+    - espera un momento
+    - dame un segundo
+    - guarda silencio un rato
+    - detente por ahora
+    - deja de hablar un momento
+    - quédate en pausa
+    - haz una pausa
+    - espera un poco antes de seguir
+    - pon la conversación en espera
+    - necesito hacer algo, espera un momento
+    - espera, ahora no puedo hablar
+    - necesito un momento, luego seguimos
+    - deja la conversación en pausa
+    - me ha surgido algo, espera
+    - ahora no puedo, seguimos luego
+    - aguarda un instante
+    - no hables por ahora
+    - ahora no puedo atender, pausa la conversación
+    - silencio por un rato
+    - mejor seguimos luego
+    - haz una pausa mientras atiendo esto
+
+
+- intent: continuar_conversacion
+  examples: |
+    - continuemos la conversación
+    - continuar conversación
+    - continúa con la conversación
+    - sigamos hablando
+    - retoma la conversación
+    - puedes seguir
+    - continúa donde lo dejamos
+    - sigue con lo que decías
+    - dime lo último que mencionaste
+    - volvamos al tema anterior
+    - dime lo que dijiste antes
+    - retomemos la conversación
+    - puedes seguir con la charla
+    - sigamos con esto
+    - quiero continuar con la conversación
+    - regresemos a lo que hablábamos
+    - me fui un momento, pero ya volví
+    - perdona, estaba ocupado, pero ya podemos seguir
+    - estoy de vuelta, continuemos
+    - ya he terminado, sigamos
+    - podemos seguir hablando
+    - retoma el último tema
+    - qué estábamos diciendo?
+    - qué decías antes?
+    - dime en qué habíamos quedado
+    - me perdí un poco, puedes repetir?
+    - qué me estaba contando?
+    - sigue con la respuesta
+    - quiero seguir con lo que hablábamos
+    - sigamos por donde lo dejamos
+    - estoy de vuelta, ¿seguimos?
+    
+
+- intent: nlu_fallback
+  examples: |
+    - quiero añadir una tarea nueva
+    - quiero crear una nueva tarea
+    - añade una tarea a mi lista
+    - mete esto en la lista
+    - agrégalo a mis pendientes
+    - necesito hacer algo
+    - apunta algo por favor
+    - quiero eliminar algo de mi lista
+    - cómo borro una tarea?
+    - saca esto de la lista
+    - quiero ver mis tareas
+    - dime qué cosas tengo pendientes
+    - necesito ver mis pendientes
+    - consulta mis tareas completadas
+    - qué tareas he terminado?
+    - recuérdame mis tareas de hoy
+    - cuéntame un chiste
+    - me duele la cabeza
+    - ¿cuál es el clima hoy?
+    - ¿quién ganó el partido ayer?
+    - pato, tengo hambre
+    - oye pato, qué opinas del espacio?
+    - necesito comprar una nevera
+    - háblame de física cuántica
+    - qué opinas sobre el universo?
+    - quién es el presidente de Francia?
+    - qué hora es?
+    - cuánto es 2 + 2?
+    - hola
+    - saludos
+    - oye pato
+    - dime algo
+    - qué pasa
+    - sí
+    - no
+    - vale
+    - perfecto
+    - qué dices
+    - ajá
+    - no sé
+    - ok pato
+    - cuéntame más
+    - sigo aquí
+    - dime otra cosa
+    - explícate mejor
+    - quiero añadir una tarea
+    - añadir tarea
+    - eliminar tarea
+    - modificar tarea
+    - consultar tarea
+    
